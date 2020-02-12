@@ -1,4 +1,3 @@
-//2020-01-21 Toshiya Y
 pragma solidity >=0.5.0 <0.7.0;
 
 import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ERC20/ERC20Mintable.sol";
@@ -10,33 +9,29 @@ import "https://github.com/OpenZeppelin/openzeppelin-solidity/contracts/token/ER
 contract MyToken is ERC20Mintable, ERC20Burnable, ERC20Detailed {
     
     //ERC20Detailed Burnable Mintable準拠
-    //name-symbol-decimals
-    //Data is example.
-    //if文を敢えて使わずrequireで対応。
-    
-    string private _name = "Test-SiteTicketToken";
-    string private _symbol = "TESTSTT1";
+    //name-symbol-decimal
+    string private _name = "SiteTicketToken";
+    string private _symbol = "STT";
     uint8 private _decimals = 0;
-    uint value = 1000;
+    uint value = 100;
     
     //Creator address 
-    //address private _creatorAddress = 0x86904339D23BF346C1FFF31Cc3Bb7262fa59d837;
     address private _creatorAddress = 0xCA35b7d915458EF540aDe6068dFe2F44E8fa733c;
 
     //Creator data
-    string private _creatorName = "Toshiya Y ";
-    string private _creatorContact = "github.com/Toshiya-Y-K-N";
-    string private _creatorData =  "toshiya test site";
+    string private _creatorName = "Kaz Naz";
+    string private _creatorContact = "github.com/hogehoge;
+    string private _creatorData =  "KN test site";
 
     //Site
     string private _creatorSitePassWord1 = "123456789";//FirstPassword
-    string private _creatorSitePassWord2 = "ABCDEFG98765";//Firstpassword
-    string private _creatorSiteAddress1 = "https://toshiyay1111.official.ec/secret_ec/";//example
-    string private _creatorSiteAddress2 = "https://toshiyay2222.official.ec/secret_ec/";//example
+    string private _creatorSitePassWord2 = "ABCDEFG98765";
+    string private _creatorSiteAddress1 = "https://hogehoge1.com";//example
+    string private _creatorSiteAddress2 = "https://hogehoge2.com";
 
     //fansite ticket value
-    uint _siteTicketValue1 = 10 ;
-    uint _siteTicketValue2 = 100 ; 
+    uint _siteTicketValue1 = 1 ;
+    uint _siteTicketValue2 = 10 ; 
     
     //enableSwitch
     bool _enableFlag = true ; 
@@ -105,8 +100,6 @@ contract MyToken is ERC20Mintable, ERC20Burnable, ERC20Detailed {
         return _enableFlag; 
     }
 
-////////////////////////////////////////////////////////////////    
-    //Creator Data Section　省略
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
     constructor()
